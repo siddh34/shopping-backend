@@ -1,7 +1,6 @@
 #include <drogon/drogon.h>
 
 int main() {
-    drogon::app().addListener("0.0.0.0", 5555);
-    drogon::app().run();
+    drogon::app().loadConfigFile("./config.json").run();
     return 0;
 }
