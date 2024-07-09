@@ -2,7 +2,7 @@
 #include <drogon/HttpController.h>
 using namespace drogon;
 
-class Cart : public drogon::HttpController<Cart>
+class Cart : public drogon::HttpController<Cart, false>
 {
 public:
     METHOD_LIST_BEGIN

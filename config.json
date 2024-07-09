@@ -31,5 +31,32 @@
 			"http_methods": ["get", "post"]
 		}
 	],
-	"run_as_daemon": false
+	"run_as_daemon": false,
+	"log": {
+		"log_path": "./logs",
+		"log_level": "info",
+		"logfile_base_name": "drogon",
+		"logfile_extension": ".log",
+		"log_size_limit": 100000000
+	},
+	"server": {
+		"idle_connection_timeout": 60,
+		"keepalive_requests": 0,
+		"pipelining_requests": 0,
+		"gzip": true,
+		"client_max_body_size": "1M",
+		"client_max_memory_body_size": "64K",
+		"client_max_websocket_message_size": "128K",
+		"home_page": "index.html"
+	},
+	"session": {
+		"enable_session": true,
+		"session_timeout": 1200,
+		"cookie_secure": false,
+		"session_id_name": "JSESSIONID"
+	},
+	"upload": {
+		"enable_upload": true,
+		"max_file_size": 1048576
+	}
 }
