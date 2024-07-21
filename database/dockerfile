@@ -17,4 +17,5 @@ COPY database.db .
 EXPOSE 3306
 
 # Set the command to run when the container starts
-CMD ["sqlite3", "database.db"]
+
+CMD ["/usr/bin/sqlite3", "database.db"]
