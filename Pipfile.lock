@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f8406ef1c7a70fbd2d96c10b6b7f5efaccdb0c2d657f2fdb4594ca2c8d104a52"
+            "sha256": "76268542a8f93f9d53023ceaae5b0b041c0f84f010da85e867b98b165e8bfc6f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -419,6 +419,15 @@
             "markers": "python_version >= '3.8'",
             "version": "==2.20.1"
         },
+        "pydantic-settings": {
+            "hashes": [
+                "sha256:11ad8bacb68a045f00e4f862c7a718c8a9ec766aa8fd4c32e39a0594b207b53a",
+                "sha256:c5802e3d62b78e82522319bbc9b8f8ffb28ad1c988a99311d04f2a6051fca0a7"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==2.3.4"
+        },
         "pygments": {
             "hashes": [
                 "sha256:786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199",
@@ -432,6 +441,7 @@
                 "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca",
                 "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"
             ],
+            "markers": "python_version >= '3.8'",
             "version": "==1.0.1"
         },
         "python-multipart": {
