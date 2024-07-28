@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from .utils.env import Settings
 from sqlalchemy.orm import Session
 from .utils.database import SessionLocal, engine, Base
+from .routers import user_routes
 
 Base.metadata.create_all(bind=engine)
 
@@ -25,6 +26,8 @@ def get_db():
     finally:
         db.close()
 
-@app.get("/")
-async def read_root():
+@app.get("/", response_model=dict)
+async def read_root() -> dict:
     return {"Server:": "Hi, I'm alive!"}
+
+app.include_router(user_routes.router)

@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
-class User(BaseModel):
+class UserResponse(BaseModel):
     id: int
     email: str
-    hashed_password: str
     is_active: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
 
 class UserCreate(BaseModel):
     email: str
@@ -15,7 +15,7 @@ class UserCreate(BaseModel):
     is_active: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class UserUpdate(BaseModel):
     email: str
@@ -23,10 +23,10 @@ class UserUpdate(BaseModel):
     is_active: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class UserDelete(BaseModel):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
