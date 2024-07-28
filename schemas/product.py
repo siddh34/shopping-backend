@@ -5,7 +5,6 @@ class ProductResponse(BaseModel):
     name: str
     price: float
     description: str
-    is_active: bool
 
     class Config:
         from_attributes = True
@@ -14,7 +13,6 @@ class ProductCreate(BaseModel):
     name: str
     price: float
     description: str
-    is_active: bool
 
     class Config:
         from_attributes = True
@@ -23,7 +21,6 @@ class ProductUpdate(BaseModel):
     name: str
     price: float
     description: str
-    is_active: bool
 
     class Config:
         from_attributes = True
