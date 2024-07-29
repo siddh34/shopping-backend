@@ -13,6 +13,7 @@ router = APIRouter(
 @router.get("/cart/", response_model=list[CartResponse])
 def read_cart(db: Session = Depends(get_db)) -> any:
     carts = db.query(Cart).all()
+    print(carts)
     return [CartResponse.model_validate(cart) for cart in carts]
 
 @router.get("/cart/{cart_id}", response_model=CartResponse)

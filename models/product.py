@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 
 from ..utils.database import Base
 
+
 class Product(Base):
     __tablename__ = "products"
 
@@ -12,4 +13,4 @@ class Product(Base):
     price = Column(Float, index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
     owner = relationship("User", back_populates="products")
-    product = relationship("Cart", back_populates="product")
+    carts = relationship("Cart", back_populates="product")
