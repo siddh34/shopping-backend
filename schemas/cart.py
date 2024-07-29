@@ -22,7 +22,6 @@ class CartUpdate(BaseModel):
     product_id: int
     quantity: int
 
-
     class Config:
         from_attributes = True
 

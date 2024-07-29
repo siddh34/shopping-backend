@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from ..models.user import User
-from ..schemas.user import UserUpdate, UserResponse
+from ..schemas.user import UserUpdate, UserResponse, UserCreate
 from fastapi import APIRouter, Depends
 from ..utils.database import get_db
 
@@ -12,9 +12,13 @@ router = APIRouter(
 
 
 @router.post("/users/", response_model=dict)
-def create_user(user: UserResponse, db: Session = Depends(get_db)):
-    db.add(user)
+def create_user(user: UserCreate, db: Session = Depends(get_db)):
+    user_data = User(
+        email=user.email, hashed_password=user.hashed_password, is_active=user.is_active
+    )
+    db.add(user_data)
     db.commit()
+    db.refresh(user_data)
     return {"message": "User created successfully"}
 
 

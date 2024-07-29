@@ -8,7 +8,7 @@ class Product(Base):
     __tablename__ = "products"
 
     id = Column(Integer, primary_key=True)
-    title = Column(String, index=True)
+    name = Column(String, index=True)
     description = Column(String, index=True)
     price = Column(Float, index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
