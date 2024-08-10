@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fastapi = "*"
 sqlalchemy = "*"
 pydantic-settings = "*"
+fastapi = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
